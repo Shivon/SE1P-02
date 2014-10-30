@@ -1,4 +1,4 @@
 SE1P-02
 =======
 
-task 02 to SE1P - entities and components
+SE1P - task 02 - entities and components
