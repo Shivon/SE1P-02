@@ -26,7 +26,7 @@ public class EmailTyp {
     }
 
     public static EmailTyp valueOf(String email){
-        //Regex for emailadresses
+        //Regex for emailadresses http://www.regular-expressions.info/email.html
         boolean stringMatch = Pattern.matches("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@"
                + "(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?", email);
 
