@@ -9,11 +9,21 @@ import Datatypes.TimeType;
  */
 public class Frage {
 
-    //private Fragenart fragenart;
+    private Fragenart fragenart;
     private QuestionNumber frageNummer;
     private TimeType loesungszeit;
-    private TextDocuType Fragestellung;
+    private TextDocuType fragestellung;
     private TextDocuType musterloesung;
+
+    //getter and setter
+
+    public Fragenart getFragenart() {
+        return fragenart;
+    }
+
+    public void setFragenart(Fragenart fragenart) {
+        this.fragenart = fragenart;
+    }
 
     public QuestionNumber getFrageNummer() {
         return frageNummer;
@@ -32,11 +42,11 @@ public class Frage {
     }
 
     public TextDocuType getFragestellung() {
-        return Fragestellung;
+        return fragestellung;
     }
 
     public void setFragestellung(TextDocuType fragestellung) {
-        Fragestellung = fragestellung;
+        fragestellung = fragestellung;
     }
 
     public TextDocuType getMusterloesung() {
@@ -47,5 +57,16 @@ public class Frage {
         this.musterloesung = musterloesung;
     }
 
+    private Frage(QuestionNumber frageNummer, TimeType loesungszeit, TextDocuType fragestellung, TextDocuType musterloesung, Fragenart fragenart) {
+        this.frageNummer = frageNummer;
+        this.loesungszeit = loesungszeit;
+        this.fragestellung = fragestellung;
+        this.musterloesung = musterloesung;
+        this.fragenart = fragenart;
+    }
+
+    public Frage valueOf(QuestionNumber frageNummer, TimeType loesungszeit, TextDocuType fragestellung, TextDocuType musterloesung, Fragenart fragenart){
+        return new Frage(frageNummer, loesungszeit, fragestellung, musterloesung, fragenart);
+    }
 
 }
