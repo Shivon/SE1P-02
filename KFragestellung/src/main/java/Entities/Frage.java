@@ -1,6 +1,5 @@
 package Entities;
 
-import Datatypes.QuestionNumber;
 import Datatypes.TextDocuType;
 import Datatypes.TimeType;
 
@@ -10,7 +9,7 @@ import Datatypes.TimeType;
 public class Frage {
 
     private Fragenart fragenart;
-    private QuestionNumber frageNummer;
+    private int frageNummer;
     private TimeType loesungszeit;
     private TextDocuType fragestellung;
     private TextDocuType musterloesung;
@@ -25,11 +24,11 @@ public class Frage {
         this.fragenart = fragenart;
     }
 
-    public QuestionNumber getFrageNummer() {
+    public int getFrageNummer() {
         return frageNummer;
     }
 
-    public void setFrageNummer(QuestionNumber frageNummer) {
+    public void setFrageNummer(int frageNummer) {
         this.frageNummer = frageNummer;
     }
 
@@ -57,7 +56,7 @@ public class Frage {
         this.musterloesung = musterloesung;
     }
 
-    private Frage(QuestionNumber frageNummer, TimeType loesungszeit, TextDocuType fragestellung, TextDocuType musterloesung, Fragenart fragenart) {
+    private Frage(int frageNummer, TimeType loesungszeit, TextDocuType fragestellung, TextDocuType musterloesung, Fragenart fragenart) {
         this.frageNummer = frageNummer;
         this.loesungszeit = loesungszeit;
         this.fragestellung = fragestellung;
@@ -65,7 +64,7 @@ public class Frage {
         this.fragenart = fragenart;
     }
 
-    public Frage valueOf(QuestionNumber frageNummer, TimeType loesungszeit, TextDocuType fragestellung, TextDocuType musterloesung, Fragenart fragenart){
+    public Frage valueOf(int frageNummer, TimeType loesungszeit, TextDocuType fragestellung, TextDocuType musterloesung, Fragenart fragenart){
         return new Frage(frageNummer, loesungszeit, fragestellung, musterloesung, fragenart);
     }
 

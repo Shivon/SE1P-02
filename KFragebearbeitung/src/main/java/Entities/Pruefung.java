@@ -47,6 +47,9 @@ public class Pruefung {
         this.korrektheit = korrektheit;
         this.benoetigteZeit = benoetigteZeit;
         this.laengeDerPruefung = laengeDerPruefung;
+    }
 
+    public static Pruefung valueOf(Date pruefungsbeginn, ProcentType korrektheit, TimeType benoetigteZeit, LaengeDerPruefungTyp laengeDerPruefung){
+        return new Pruefung(pruefungsbeginn, korrektheit, benoetigteZeit, laengeDerPruefung);
     }
 }

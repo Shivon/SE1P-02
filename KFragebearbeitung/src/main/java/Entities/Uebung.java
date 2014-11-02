@@ -46,7 +46,7 @@ public class Uebung {
         this. benoetigteZeit = benoetigteZeit;
     }
 
-    public Uebung valueOf(Date zeitpunkt, ProcentType korrektheit, TimeType benoetigteZeit){
+    public static Uebung valueOf(Date zeitpunkt, ProcentType korrektheit, TimeType benoetigteZeit){
         return new Uebung(zeitpunkt, korrektheit, benoetigteZeit);
     }
 
