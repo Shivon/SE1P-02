@@ -92,5 +92,5 @@ public class Benutzer {
         return new Benutzer(name, vorname, email, benutzername, passwort, berechtikung, anzeigebild);
     }
 
-    
+
 }
