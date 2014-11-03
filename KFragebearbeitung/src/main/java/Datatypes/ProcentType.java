@@ -1,4 +1,4 @@
-package main.java.Datatypes;
+package Datatypes;
 
 import java.awt.font.NumericShaper;
 
