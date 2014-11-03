@@ -1,6 +1,6 @@
-package main.java.Entities;
+package Entities;
 
-import main.java.Datatypes.*;
+import Datatypes.*;
 
 import java.security.UnrecoverableEntryException;
 import java.util.Date;

@@ -1,6 +1,6 @@
-package main.java.Entities;
+package Entities;
 
-import main.java.Datatypes.*;
+import Datatypes.*;
 
 /**
  * Created by Louisa on 02.11.2014.
