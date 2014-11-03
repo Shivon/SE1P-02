@@ -1,4 +1,8 @@
-/**
+import Interface.IPersistenceServices;
+import Services.PersistenceServices;
+
+
+ /**
  * Created by Louisa on 02.11.2014.
  */
 public class main {
@@ -14,8 +18,10 @@ public class main {
 //        IBuchungsVorgang buchungsManager =
 //                new KontoverwaltungsKomponente(persistenceService, filialeManager);
 
+       IPersistenceServices persistenceServices = new PersistenceServices();
+
+       IBenutzer benutzer =
 
     }
-
 
 }

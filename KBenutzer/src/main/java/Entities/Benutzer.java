@@ -1,11 +1,12 @@
 package Entities;
 
 import Datatypes.*;
+import Interface.IBenutzer;
 
 /**
  * Created by Louisa on 02.11.2014.
  */
-public class Benutzer {
+public class Benutzer{
     // declaration
     private String name;
     private String vorname;
