@@ -2,6 +2,7 @@ package Entities;
 
 import Datatypes.*;
 
+import java.time.Duration;
 import java.util.Date;
 
 /**
@@ -10,7 +11,7 @@ import java.util.Date;
 public class Pruefung {
     private Date pruefungsbeginn;  //ehemals zeitstempel in UML
     private ProcentType korrektheit;
-    private TimeType benoetigteZeit;
+    private Duration benoetigteZeit;
     private LaengeDerPruefungTyp laengeDerPruefung;
 
     //Länge der Prüfung befindet sich im Enum LaengeDerPruefung
@@ -32,16 +33,16 @@ public class Pruefung {
         this.korrektheit = korrektheit;
     }
 
-    public TimeType getBenoetigteZeit() {
+    public Duration getBenoetigteZeit() {
         return benoetigteZeit;
     }
 
-    public void setBenoetigteZeit(TimeType benoetigteZeit) {
+    public void setBenoetigteZeit(Duration benoetigteZeit) {
         this.benoetigteZeit = benoetigteZeit;
     }
 
     // TODO: really insert pruefungsbeginn manually? Or is it coming from DB?
-    private Pruefung(Date pruefungsbeginn, ProcentType korrektheit, TimeType benoetigteZeit, LaengeDerPruefungTyp laengeDerPruefung){
+    private Pruefung(Date pruefungsbeginn, ProcentType korrektheit, Duration benoetigteZeit, LaengeDerPruefungTyp laengeDerPruefung){
         this.pruefungsbeginn = pruefungsbeginn;
         this.korrektheit = korrektheit;
         this.benoetigteZeit = benoetigteZeit;
@@ -49,9 +50,9 @@ public class Pruefung {
     }
 
     // TODO: really insert pruefungsbeginn manually? Or is it coming from DB?
-    public static Pruefung valueOf(Date pruefungsbeginn, ProcentType korrektheit, TimeType benoetigteZeit, LaengeDerPruefungTyp laengeDerPruefung){
+    public static Pruefung valueOf(Date pruefungsbeginn, ProcentType korrektheit, Duration benoetigteZeit, LaengeDerPruefungTyp laengeDerPruefung){
         return new Pruefung(pruefungsbeginn, korrektheit, benoetigteZeit, laengeDerPruefung);
     }
 
-    //IMPORTANT: while generating Pruefung/ Uebung we need to check if the questions are available!!!
+    //TODO: IMPORTANT: while generating Pruefung/ Uebung we need to check if the questions are available!!!
 }
