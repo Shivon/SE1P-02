@@ -1,7 +1,6 @@
-package Entities;
+package main.java.Entities;
 
-import Datatypes.TextDocuType;
-import Datatypes.TimeType;
+import main.java.Datatypes.*;
 
 /**
  * Created by Louisa on 02.11.2014.

@@ -1,8 +1,6 @@
-package Entities;
+package main.java.Entities;
 
-import Datatypes.LaengeDerPruefungTyp;
-import Datatypes.ProcentType;
-import Datatypes.TimeType;
+import main.java.Datatypes.*;
 
 import java.util.Date;
 

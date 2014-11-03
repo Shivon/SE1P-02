@@ -1,7 +1,6 @@
-package Entities;
+package main.java.Entities;
 
-import Datatypes.ProcentType;
-import Datatypes.TimeType;
+import main.java.Datatypes.*;
 
 import java.security.UnrecoverableEntryException;
 import java.util.Date;

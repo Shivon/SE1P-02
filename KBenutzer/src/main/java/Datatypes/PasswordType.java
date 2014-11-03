@@ -1,4 +1,4 @@
-package Datatypes;
+package main.java.Datatypes;
 
 import java.util.IllegalFormatCodePointException;
 import java.util.regex.Pattern;

@@ -1,16 +1,12 @@
-package Entities;
+package main.java.Entities;
 
-import Datatypes.EmailTyp;
-import Datatypes.PasswordType;
-import Datatypes.PhotoType;
+import main.java.Datatypes.*;
 
 /**
  * Created by Louisa on 02.11.2014.
  */
 public class Benutzer {
-
-
-
+    // declaration
     private String name;
     private String vorname;
     private EmailTyp email;

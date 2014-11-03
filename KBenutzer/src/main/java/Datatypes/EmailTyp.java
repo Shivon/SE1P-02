@@ -1,4 +1,4 @@
-package Datatypes;
+package main.java.Datatypes;
 
 import jdk.nashorn.internal.runtime.regexp.joni.Regex;
 
@@ -36,6 +36,8 @@ public class EmailTyp {
 
         throw new IllegalArgumentException("the emailadress  is illegal");
     }
+
+
 
 //    public static boolean test(String email){
 //        boolean stringMatch = Pattern.matches("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@"

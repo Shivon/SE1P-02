@@ -1,7 +1,7 @@
-package Komponente;
+package main.java.Komponente;
 
-import Interface.IBenutzer;
-import Interface.IPersistenceServices;
+import main.java.Interface.IBenutzer;
+import main.java.Interface.IPersistenceServices;
 
 /**
  * Created by Louisa on 02.11.2014.
