@@ -1,6 +1,6 @@
 package Component;
 
-import Interface.IFragestellung;
+import Interface.*;
 import Interface.IPersistenceServices;
 
 /**

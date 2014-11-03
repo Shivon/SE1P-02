@@ -8,7 +8,7 @@ import java.awt.font.NumericShaper;
 public class ProcentType{
     private int procent;
 
-    //getter and setter
+    // getter and setter
     public int getProcent() {
         return procent;
     }
@@ -17,7 +17,7 @@ public class ProcentType{
         this.procent = procent;
     }
 
-    //Constructor
+    // constructor
     private ProcentType(int procent){
         if (procent >= 0 && procent <= 100){
             this.procent = procent;

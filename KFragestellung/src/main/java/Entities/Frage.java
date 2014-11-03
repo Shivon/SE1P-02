@@ -1,6 +1,7 @@
 package Entities;
 
 import Datatypes.*;
+import java.time.Duration;
 
 /**
  * Created by Louisa on 02.11.2014.
@@ -9,10 +10,11 @@ public class Frage {
 
     private Fragenart fragenart;
     private int frageNummer;
-    private TimeType loesungszeit;
+    private Minutes loesungszeit;
     private TextDocuType fragestellung;
     private TextDocuType musterloesung;
     private Boolean isAvailable;
+
 
     //getter and setter
 
@@ -32,11 +34,11 @@ public class Frage {
         this.frageNummer = frageNummer;
     }
 
-    public TimeType getLoesungszeit() {
+    public Minutes getLoesungszeit() {
         return loesungszeit;
     }
 
-    public void setLoesungszeit(TimeType loesungszeit) {
+    public void setLoesungszeit(Minutes loesungszeit) {
         this.loesungszeit = loesungszeit;
     }
 
@@ -65,7 +67,7 @@ public class Frage {
     }
 
     //TODO: Fragenummer darf nicht von jedem änderbar sein... sollte automatisch generieren ~> via DB geregelt später?
-    private Frage(int frageNummer, TimeType loesungszeit, TextDocuType fragestellung, TextDocuType musterloesung, Fragenart fragenart) {
+    private Frage(int frageNummer, Minutes loesungszeit, TextDocuType fragestellung, TextDocuType musterloesung, Fragenart fragenart) {
         this.frageNummer = frageNummer;
         this.loesungszeit = loesungszeit;
         this.fragestellung = fragestellung;
@@ -75,7 +77,7 @@ public class Frage {
     }
 
     //TODO: Fragenummer darf nicht von jedem änderbar sein... sollte automatisch generieren ~> via DB geregelt später?
-    public Frage valueOf(int frageNummer, TimeType loesungszeit, TextDocuType fragestellung, TextDocuType musterloesung, Fragenart fragenart){
+    public Frage valueOf(int frageNummer, Minutes loesungszeit, TextDocuType fragestellung, TextDocuType musterloesung, Fragenart fragenart){
         return new Frage(frageNummer, loesungszeit, fragestellung, musterloesung, fragenart);
     }
 
