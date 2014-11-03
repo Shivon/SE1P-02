@@ -30,5 +30,28 @@ public class ProcentType{
         return new ProcentType(procent);
     }
 
- 
+    public int value() {
+        return procent;
+    }
+
+    // basic functions
+    public int compareTo(ProcentType other) {
+        return Integer.compare(this.value(), other.value());
+    }
+
+    @Override
+    public boolean equals(Object other) {
+        if (this == other) {
+            return true;
+        }
+        if (!(other instanceof ProcentType)) {
+            return false;
+        }
+        return this.compareTo((ProcentType) other) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+        return procent;
+    }
 }
