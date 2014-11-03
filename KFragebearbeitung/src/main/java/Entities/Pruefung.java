@@ -50,4 +50,6 @@ public class Pruefung {
     public static Pruefung valueOf(Date pruefungsbeginn, ProcentType korrektheit, TimeType benoetigteZeit, LaengeDerPruefungTyp laengeDerPruefung){
         return new Pruefung(pruefungsbeginn, korrektheit, benoetigteZeit, laengeDerPruefung);
     }
+
+    //IMPORTANT: while generating Pruefung/ Uebung we need to check if the questions are available!!!
 }

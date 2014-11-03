@@ -12,6 +12,7 @@ public class Frage {
     private TimeType loesungszeit;
     private TextDocuType fragestellung;
     private TextDocuType musterloesung;
+    private Boolean isAvailable;
 
     //getter and setter
 
@@ -55,14 +56,25 @@ public class Frage {
         this.musterloesung = musterloesung;
     }
 
+    public Boolean getIsAvailable() {
+        return isAvailable;
+    }
+
+    public void setIsAvailable(Boolean isAvailable) {
+        this.isAvailable = isAvailable;
+    }
+
+    //TODO: Fragenummer darf nicht von jedem änderbar sein... sollte automatisch generieren ~> via DB geregelt später?
     private Frage(int frageNummer, TimeType loesungszeit, TextDocuType fragestellung, TextDocuType musterloesung, Fragenart fragenart) {
         this.frageNummer = frageNummer;
         this.loesungszeit = loesungszeit;
         this.fragestellung = fragestellung;
         this.musterloesung = musterloesung;
         this.fragenart = fragenart;
+        this.isAvailable = true;
     }
 
+    //TODO: Fragenummer darf nicht von jedem änderbar sein... sollte automatisch generieren ~> via DB geregelt später?
     public Frage valueOf(int frageNummer, TimeType loesungszeit, TextDocuType fragestellung, TextDocuType musterloesung, Fragenart fragenart){
         return new Frage(frageNummer, loesungszeit, fragestellung, musterloesung, fragenart);
     }

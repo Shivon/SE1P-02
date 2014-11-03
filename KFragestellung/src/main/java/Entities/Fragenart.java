@@ -1,9 +1,14 @@
 package main.java.Entities;
 
+import main.java.Entities.*;
+
 /**
  * Created by Louisa on 02.11.2014.
  */
-public class Fragenart {
+public abstract class Fragenart {
 
+    public void deactivateQuestion(int frageNummer) {
+        //TODO: isAvailable auf false setzen, falls Frage vorhanden.
 
+    }
 }

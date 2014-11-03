@@ -49,5 +49,5 @@ public class Uebung {
         return new Uebung(zeitpunkt, korrektheit, benoetigteZeit);
     }
 
-
+    //IMPORTANT: while generating Pruefung/ Uebung we need to check if the questions are available!!!
 }
