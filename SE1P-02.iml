@@ -9,9 +9,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="KModul" />
-    <orderEntry type="module" module-name="KFragestellung" />
-    <orderEntry type="module" module-name="KKommunikation" />
   </component>
 </module>
 
