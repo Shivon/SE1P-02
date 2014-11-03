@@ -22,7 +22,7 @@ public class ProcentType{
         if (procent >= 0 && procent <= 100){
             this.procent = procent;
         }else{
-            throw new IllegalArgumentException("this number is not in range");
+            throw new IllegalArgumentException("This number is not in range");
         }
     }
 
