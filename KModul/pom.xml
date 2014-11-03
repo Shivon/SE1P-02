@@ -8,11 +8,11 @@
     <artifactId>KModul</artifactId>
     <version>1.0-SNAPSHOT</version>
     <dependencies>
-        <dependency>
-            <groupId>SE1</groupId>
-            <artifactId>KCommon</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>SE1</groupId>-->
+            <!--<artifactId>KCommon</artifactId>-->
+            <!--<version>1.0-SNAPSHOT</version>-->
+        <!--</dependency>-->
     </dependencies>
 
 </project>
