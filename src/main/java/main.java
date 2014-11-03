@@ -1,5 +1,8 @@
-import Interface.IPersistenceServices;
-import Services.PersistenceServices;
+import Component.KBenutzerServiceImpl;
+import Component.KFragebearbeitungImpl;
+import Component.KKommunikationImpl;
+import Component.KModulImpl;
+import Interface.*;
 
 
  /**
@@ -10,17 +13,9 @@ public class main {
 
     public static void main(String[] args) {
 
-//        IPersistenceServices persistenceService = ... // todo
-//        IKundenManager kundenManager =
-//                new KundenverwaltungsKomponente(persistenceService);
-//        IFilialeManager filialeManager =
-//                new FilialeverwaltungsKomponente(persistenceService);
-//        IBuchungsVorgang buchungsManager =
-//                new KontoverwaltungsKomponente(persistenceService, filialeManager);
+    
 
-       IPersistenceServices persistenceServices = new PersistenceServices();
 
-       IBenutzer benutzer =
 
     }
 

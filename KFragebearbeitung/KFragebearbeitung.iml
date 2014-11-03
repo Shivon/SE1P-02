@@ -11,7 +11,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="KCommon" />
+    <orderEntry type="library" name="Maven: SE1:KCommon:1.0-SNAPSHOT" level="project" />
   </component>
 </module>
 

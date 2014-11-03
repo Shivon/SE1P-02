@@ -1,7 +1,6 @@
 package Component;
 
 import Interface.IBenutzer;
-import Interface.IPersistenceServices;
 import Interface.KBenutzerService;
 
 /**
@@ -9,8 +8,8 @@ import Interface.KBenutzerService;
  */
 public class KBenutzerServiceImpl implements KBenutzerService {
 
-    public KBenutzerServiceImpl(IPersistenceServices persistenceService){
 
-    }
+
+
 
 }
