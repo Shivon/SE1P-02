@@ -1,5 +1,5 @@
-import Component.KBenutzerServiceImpl;
-import Component.KFragebearbeitungImpl;
+
+import Component.KFragestellungImpl;
 import Component.KKommunikationImpl;
 import Component.KModulImpl;
 import Interface.*;
@@ -13,8 +13,9 @@ public class main {
 
     public static void main(String[] args) {
 
-    
-
+        KModul modul = new KModulImpl();
+        KFragestellung fragestellung = new KFragestellungImpl(modul);
+        KKommunikation kommunikation = new KKommunikationImpl(modul);
 
 
     }

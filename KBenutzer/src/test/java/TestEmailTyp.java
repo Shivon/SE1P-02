@@ -1,7 +1,6 @@
-package test.java;
 
-import main.java.Datatypes.EmailTyp;
-import junit.framework.Assert;
+
+import Datatypes.EmailTyp;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
@@ -10,11 +9,12 @@ import static org.junit.Assert.assertEquals;
  */
 public class TestEmailTyp {
 
-//    @Test
-//    public void blaTest(){
+    @Test
+    public void blaTest() {
 //       assertEquals(true, EmailTyp.test("marlene.klausen@aol.de"));
 //       assertEquals(false, EmailTyp.test("marlene.klausen@--?.de"));
 //       assertEquals(false, EmailTyp.test(".marlene.klausen@aol.de.com.po"));
 //       assertEquals(true, EmailTyp.test("mm@o-hamburg.de"));
 //    }
+    }
 }

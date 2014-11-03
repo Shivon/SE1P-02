@@ -11,7 +11,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="KCommon" />
+    <orderEntry type="module" module-name="KModul" />
   </component>
 </module>
 
