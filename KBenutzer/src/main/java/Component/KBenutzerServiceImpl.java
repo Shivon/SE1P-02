@@ -9,7 +9,7 @@ import Services.PersistenceService;
 public class KBenutzerServiceImpl implements KBenutzerService {
 
 
-    public KBenutzerServiceImpl(PersistenceService persistenceService, KModul modul, KFragestellung fragestellung, KKommunikation kommunikation, KFragebearbeitung fragebearbeitung) {
+    public KBenutzerServiceImpl(PersistenceService persistenceService, KModulService modul, KFragestellungService fragestellung, KKommunikationService kommunikation, KFragebearbeitungService fragebearbeitung) {
 
     }
 }
