@@ -48,9 +48,12 @@ public class EmailTyp {
         return this.compareTo((EmailTyp) other) == 0;
     }
 
+    @Override
+    public int hashCode() {
+        return email.hashCode();
+    }
 
-
-//    public static boolean test(String email){
+//        public static boolean test(String email){
 //        boolean stringMatch = Pattern.matches("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@"
 //                + "(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?", email);
 //

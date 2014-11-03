@@ -20,7 +20,6 @@ public class main {
         KFragebearbeitung fragebearbeitung = new KFragebearbeitungImpl(persistenceService, fragestellung, modul);
         KBenutzerService benutzer = new KBenutzerServiceImpl(persistenceService, modul, fragestellung, kommunikation, fragebearbeitung);
 
-
     }
 
 }

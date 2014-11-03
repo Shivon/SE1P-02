@@ -5,7 +5,7 @@ package Datatypes;
  */
 public class Minutes {
     // declaration
-    int minutes;
+    private int minutes;
 
     // getter and setter
     public int getMinutes() {
@@ -28,4 +28,30 @@ public class Minutes {
     public Minutes valueOf(int minutes) {
         return new Minutes(minutes);
     }
+
+    public int value() {
+        return minutes;
+    }
+
+    // basic functions
+    public int compareTo(Minutes other) {
+        return Integer.compare(this.value(), other.value());
+    }
+
+    @Override
+    public boolean equals(Object other) {
+        if (this == other) {
+            return true;
+        }
+        if (!(other instanceof Minutes)) {
+            return false;
+        }
+        return this.compareTo((Minutes) other) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+        return minutes;
+    }
+
 }

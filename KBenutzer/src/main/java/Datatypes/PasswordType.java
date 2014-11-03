@@ -34,4 +34,20 @@ public class PasswordType {
         throw new IllegalArgumentException("not a valid password");
     }
 
+    // basic functions
+    public int compareTo(PasswordType other) {
+        return this.toString().compareTo(other.toString());
+    }
+
+    @Override
+    public boolean equals(Object other) {
+        if (this == other) { return true; }
+        if (!(other instanceof PasswordType)) { return false; }
+        return this.compareTo((PasswordType) other) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+        return passwort.hashCode();
+    }
 }
