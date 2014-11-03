@@ -36,6 +36,18 @@ public class EmailTyp {
         throw new IllegalArgumentException("the emailadress  is illegal");
     }
 
+    // basic functions
+    public int compareTo(EmailTyp other) {
+        return this.toString().compareTo(other.toString());
+    }
+
+    @Override
+    public boolean equals(Object other) {
+        if (this == other) { return true; }
+        if (!(other instanceof EmailTyp)) { return false; }
+        return this.compareTo((EmailTyp) other) == 0;
+    }
+
 
 
 //    public static boolean test(String email){
