@@ -1,4 +1,4 @@
-package main.java.Datatypes;
+package Datatypes;
 
 import jdk.nashorn.internal.runtime.regexp.joni.Regex;
 
