@@ -27,5 +27,24 @@ public class LaengeDerPruefungTyp {
         }
     }
 
+    // basic functions
+    public int compareTo(LaengeDerPruefungTyp other) {
+        return Integer.compare(this.laengeInMinuten(), other.laengeInMinuten());
+    }
 
+    @Override
+    public boolean equals(Object other) {
+        if (this == other) {
+            return true;
+        }
+        if (!(other instanceof LaengeDerPruefung)) {
+            return false;
+        }
+        return this.compareTo((LaengeDerPruefungTyp) other) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+        return laenge.hashCode();
+    }
 }
