@@ -1,7 +1,7 @@
-package main.java.Component;
+package Component;
 
-import main.java.Interface.IFragebearbeitung;
-import main.java.Interface.IPersistenceServices;
+import Interface.IFragebearbeitung;
+import Interface.IPersistenceServices;
 
 /**
  * Created by KamikazeOnRoad on 03.11.2014.

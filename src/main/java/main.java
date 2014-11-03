@@ -6,6 +6,14 @@ public class main {
 
     public static void main(String[] args) {
 
+//        IPersistenceServices persistenceService = ... // todo
+//        IKundenManager kundenManager =
+//                new KundenverwaltungsKomponente(persistenceService);
+//        IFilialeManager filialeManager =
+//                new FilialeverwaltungsKomponente(persistenceService);
+//        IBuchungsVorgang buchungsManager =
+//                new KontoverwaltungsKomponente(persistenceService, filialeManager);
+
 
     }
 

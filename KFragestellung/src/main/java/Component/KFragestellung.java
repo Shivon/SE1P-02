@@ -1,7 +1,7 @@
-package main.java.Component;
+package Component;
 
-import main.java.Interface.IFragestellung;
-import main.java.Interface.IPersistenceServices;
+import Interface.IFragestellung;
+import Interface.IPersistenceServices;
 
 /**
  * Created by KamikazeOnRoad on 03.11.2014.
