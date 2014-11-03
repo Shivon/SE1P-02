@@ -1,11 +1,11 @@
 
-import Component.KFragestellungImpl;
-import Component.KKommunikationImpl;
-import Component.KModulImpl;
+import Component.*;
 import Interface.*;
+import Services.PersistenceService;
+import Services.PersistenceServiceImpl;
 
 
- /**
+/**
  * Created by Louisa on 02.11.2014.
  */
 public class main {
@@ -13,9 +13,12 @@ public class main {
 
     public static void main(String[] args) {
 
-        KModul modul = new KModulImpl();
-        KFragestellung fragestellung = new KFragestellungImpl(modul);
-        KKommunikation kommunikation = new KKommunikationImpl(modul);
+        PersistenceService persistenceService = new PersistenceServiceImpl();
+        KModul modul = new KModulImpl(persistenceService);
+        KFragestellung fragestellung = new KFragestellungImpl(persistenceService, modul);
+        KKommunikation kommunikation = new KKommunikationImpl(persistenceService, modul);
+        KFragebearbeitung fragebearbeitung = new KFragebearbeitungImpl(persistenceService, fragestellung, modul);
+        KBenutzerService benutzer = new KBenutzerServiceImpl(persistenceService, modul, fragestellung, kommunikation, fragebearbeitung);
 
 
     }

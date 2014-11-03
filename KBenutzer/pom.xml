@@ -20,6 +20,31 @@
             <artifactId>KCommon</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>SE1</groupId>
+            <artifactId>KFragestellung</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>SE1</groupId>
+            <artifactId>KModul</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>SE1</groupId>
+            <artifactId>KBenutzer</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>SE1</groupId>
+            <artifactId>KKommunikation</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>SE1</groupId>
+            <artifactId>KFragebearbeitung</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
 
