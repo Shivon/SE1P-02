@@ -12,4 +12,6 @@ public class KFragestellungImpl implements KFragestellung {
     public KFragestellungImpl(KModul modul) {
 
     }
+
+
 }
