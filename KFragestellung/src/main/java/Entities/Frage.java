@@ -1,7 +1,8 @@
 package Entities;
 
-import Datatypes.*;
-import java.time.Duration;
+
+import Datatypes.Minutes;
+import javax.swing.text.Document;
 
 /**
  * Created by Louisa on 02.11.2014.
@@ -11,8 +12,8 @@ public class Frage {
     private Fragenart fragenart;
     private int frageNummer;
     private Minutes loesungszeit;
-    private TextDocuType fragestellung;
-    private TextDocuType musterloesung;
+    private Document fragestellung;
+    private Document musterloesung;
     private Boolean isAvailable;
 
 
@@ -42,19 +43,19 @@ public class Frage {
         this.loesungszeit = loesungszeit;
     }
 
-    public TextDocuType getFragestellung() {
+    public Document getFragestellung() {
         return fragestellung;
     }
 
-    public void setFragestellung(TextDocuType fragestellung) {
+    public void setFragestellung(Document fragestellung) {
         fragestellung = fragestellung;
     }
 
-    public TextDocuType getMusterloesung() {
+    public Document getMusterloesung() {
         return musterloesung;
     }
 
-    public void setMusterloesung(TextDocuType musterloesung) {
+    public void setMusterloesung(Document musterloesung) {
         this.musterloesung = musterloesung;
     }
 
@@ -67,7 +68,7 @@ public class Frage {
     }
 
     //TODO: Fragenummer darf nicht von jedem änderbar sein... sollte automatisch generieren ~> via DB geregelt später?
-    private Frage(int frageNummer, Minutes loesungszeit, TextDocuType fragestellung, TextDocuType musterloesung, Fragenart fragenart) {
+    private Frage(int frageNummer, Minutes loesungszeit, Document fragestellung, Document musterloesung, Fragenart fragenart) {
         this.frageNummer = frageNummer;
         this.loesungszeit = loesungszeit;
         this.fragestellung = fragestellung;
@@ -77,7 +78,7 @@ public class Frage {
     }
 
     //TODO: Fragenummer darf nicht von jedem änderbar sein... sollte automatisch generieren ~> via DB geregelt später?
-    public Frage valueOf(int frageNummer, Minutes loesungszeit, TextDocuType fragestellung, TextDocuType musterloesung, Fragenart fragenart){
+    public Frage valueOf(int frageNummer, Minutes loesungszeit, Document fragestellung, Document musterloesung, Fragenart fragenart){
         return new Frage(frageNummer, loesungszeit, fragestellung, musterloesung, fragenart);
     }
 
