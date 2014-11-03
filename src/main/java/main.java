@@ -14,10 +14,10 @@ public class main {
     public static void main(String[] args) {
 
         PersistenceService persistenceService = new PersistenceServiceImpl();
-        KModul modul = new KModulImpl(persistenceService);
-        KFragestellung fragestellung = new KFragestellungImpl(persistenceService, modul);
-        KKommunikation kommunikation = new KKommunikationImpl(persistenceService, modul);
-        KFragebearbeitung fragebearbeitung = new KFragebearbeitungImpl(persistenceService, fragestellung, modul);
+        KModulService modul = new KModulServiceImpl(persistenceService);
+        KFragestellungService fragestellung = new KFragestellungServiceImpl(persistenceService, modul);
+        KKommunikationService kommunikation = new KKommunikationServiceImpl(persistenceService, modul);
+        KFragebearbeitungService fragebearbeitung = new KFragebearbeitungServiceImpl(persistenceService, fragestellung, modul);
         KBenutzerService benutzer = new KBenutzerServiceImpl(persistenceService, modul, fragestellung, kommunikation, fragebearbeitung);
 
 
