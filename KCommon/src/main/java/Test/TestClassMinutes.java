@@ -8,6 +8,7 @@ import org.junit.Test;
 public class TestClassMinutes {
 
     public void testMin() {
+        //test
 
     }
 
