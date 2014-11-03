@@ -1,7 +1,7 @@
 package Component;
 
-import Interface.IBenutzer;
-import Interface.KBenutzerService;
+import Interface.*;
+import Services.PersistenceService;
 
 /**
  * Created by Louisa on 02.11.2014.
@@ -9,7 +9,7 @@ import Interface.KBenutzerService;
 public class KBenutzerServiceImpl implements KBenutzerService {
 
 
+    public KBenutzerServiceImpl(PersistenceService persistenceService, KModul modul, KFragestellung fragestellung, KKommunikation kommunikation, KFragebearbeitung fragebearbeitung) {
 
-
-
+    }
 }

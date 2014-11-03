@@ -12,6 +12,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="KModul" />
+    <orderEntry type="module" module-name="KCommon" />
   </component>
 </module>
 
