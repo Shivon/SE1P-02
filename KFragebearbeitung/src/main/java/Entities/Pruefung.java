@@ -40,6 +40,7 @@ public class Pruefung {
         this.benoetigteZeit = benoetigteZeit;
     }
 
+    // TODO: really insert pruefungsbeginn manually? Or is it coming from DB?
     private Pruefung(Date pruefungsbeginn, ProcentType korrektheit, TimeType benoetigteZeit, LaengeDerPruefungTyp laengeDerPruefung){
         this.pruefungsbeginn = pruefungsbeginn;
         this.korrektheit = korrektheit;
@@ -47,6 +48,7 @@ public class Pruefung {
         this.laengeDerPruefung = laengeDerPruefung;
     }
 
+    // TODO: really insert pruefungsbeginn manually? Or is it coming from DB?
     public static Pruefung valueOf(Date pruefungsbeginn, ProcentType korrektheit, TimeType benoetigteZeit, LaengeDerPruefungTyp laengeDerPruefung){
         return new Pruefung(pruefungsbeginn, korrektheit, benoetigteZeit, laengeDerPruefung);
     }

@@ -39,12 +39,14 @@ public class Uebung {
         this.benoetigteZeit = benoetigteZeit;
     }
 
+    // TODO: really insert zeitpunkt manually? Or is it coming from DB?
     private Uebung(Date zeitpunkt, ProcentType korrektheit, TimeType benoetigteZeit){
         this.zeitpunkt = zeitpunkt;
         this.korrektheit = korrektheit;
         this. benoetigteZeit = benoetigteZeit;
     }
 
+    // TODO: really insert zeitpunkt manually? Or is it coming from DB?
     public static Uebung valueOf(Date zeitpunkt, ProcentType korrektheit, TimeType benoetigteZeit){
         return new Uebung(zeitpunkt, korrektheit, benoetigteZeit);
     }
