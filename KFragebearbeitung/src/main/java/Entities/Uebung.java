@@ -41,6 +41,7 @@ public class Uebung {
 
     // TODO: really insert zeitpunkt manually? Or is it coming from DB?
     private Uebung(Date zeitpunkt, ProcentType korrektheit, Duration benoetigteZeit){
+        //zeitpunkt.getTime();
         this.zeitpunkt = zeitpunkt;
         this.korrektheit = korrektheit;
         this. benoetigteZeit = benoetigteZeit;
