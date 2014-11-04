@@ -6,6 +6,7 @@ import org.junit.Test;
 import java.util.EnumMap;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 /**
  * Created by Louisa on 02.11.2014.
@@ -21,7 +22,8 @@ public class TestEmailTyp {
         assertEquals(true, mail1.equals(mail2));
         assertEquals(false, mail1.equals(mail3));
         assertEquals(0, mail1.compareTo(mail2));
-        assertEquals(-4, mail1.compareTo(mail3));
+        assertTrue(mail1.compareTo(mail3) < 0);
+        assertTrue(mail3.compareTo(mail2) > 0);
 //        assertEquals(true, EmailTyp.test("marlene.klausen@aol.de"));
 //        assertEquals(false, EmailTyp.test("marlene.klausen@--?.de"));
 //        assertEquals(false, EmailTyp.test(".marlene.klausen@aol.de.com.po"));
