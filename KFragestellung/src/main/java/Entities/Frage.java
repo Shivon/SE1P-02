@@ -23,25 +23,25 @@ public class Frage {
         return fragenart;
     }
 
-    public void setFragenart(Fragenart fragenart) {
-        this.fragenart = fragenart;
-    }
+//    public void setFragenart(Fragenart fragenart) {
+//        this.fragenart = fragenart;
+//    }
 
     public int getFrageNummer() {
         return frageNummer;
     }
 
-    public void setFrageNummer(int frageNummer) {
-        this.frageNummer = frageNummer;
-    }
+//    public void setFrageNummer(int frageNummer) {
+//        this.frageNummer = frageNummer;
+//    }
 
     public Minutes getLoesungszeit() {
         return loesungszeit;
     }
 
-    public void setLoesungszeit(Minutes loesungszeit) {
-        this.loesungszeit = loesungszeit;
-    }
+//    public void setLoesungszeit(Minutes loesungszeit) {
+//        this.loesungszeit = loesungszeit;
+//    }
 
     public Document getFragestellung() {
         return fragestellung;
