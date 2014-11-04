@@ -60,10 +60,10 @@ public class Benutzer {
     public int getBerechtikung() {
         return berechtikung;
     }
-
-    public void setBerechtikung(int berechtikung) {
-        this.berechtikung = berechtikung;
-    }
+//
+//    public void setBerechtikung(int berechtikung) {
+//        this.berechtikung = berechtikung;
+//    }
 
     public Image getAnzeigebild() {
         return anzeigebild;

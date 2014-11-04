@@ -19,9 +19,9 @@ public class Uebung {
         return zeitpunkt;
     }
 
-    public void setZeitpunkt(Date zeitpunkt) {
-        this.zeitpunkt = zeitpunkt;
-    }
+//    public void setZeitpunkt(Date zeitpunkt) {
+//        this.zeitpunkt = zeitpunkt;
+//    }
 
     public ProcentType getKorrektheit() {
         return korrektheit;

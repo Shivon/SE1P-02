@@ -24,9 +24,9 @@ public class TestEmailTyp {
         assertEquals(0, mail1.compareTo(mail2));
         assertTrue(mail1.compareTo(mail3) < 0);
         assertTrue(mail3.compareTo(mail2) > 0);
-//        assertEquals(true, EmailTyp.test("marlene.klausen@aol.de"));
-//        assertEquals(false, EmailTyp.test("marlene.klausen@--?.de"));
-//        assertEquals(false, EmailTyp.test(".marlene.klausen@aol.de.com.po"));
-//        assertEquals(true, EmailTyp.test("mm@o-hamburg.de"));
+        assertEquals(true, EmailTyp.test("marlene.klausen@aol.de"));
+        assertEquals(false, EmailTyp.test("marlene.klausen@--?.de"));
+        assertEquals(false, EmailTyp.test(".marlene.klausen@aol.de.com.po"));
+        assertEquals(true, EmailTyp.test("mm@o-hamburg.de"));
         }
 }
