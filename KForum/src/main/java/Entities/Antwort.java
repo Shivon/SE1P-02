@@ -22,7 +22,7 @@ public class Antwort {
     public Date getZeitstempel() {
         return zeitstempel;
     }
-
+    
     public void setZeitstempel(Date zeitstempel) {
         this.zeitstempel = zeitstempel;
     }
