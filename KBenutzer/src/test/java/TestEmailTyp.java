@@ -18,15 +18,17 @@ public class TestEmailTyp {
         EmailTyp mail1 = EmailTyp.valueOf("abd@blubb.de");
         EmailTyp mail2 = mail1;
         EmailTyp mail3 = EmailTyp.valueOf("test@web.de");
+        EmailTyp mail4 = EmailTyp.valueOf("abd@blubb.de");
 
         assertEquals(true, mail1.equals(mail2));
         assertEquals(false, mail1.equals(mail3));
         assertEquals(0, mail1.compareTo(mail2));
         assertTrue(mail1.compareTo(mail3) < 0);
         assertTrue(mail3.compareTo(mail2) > 0);
-//        assertEquals(true, EmailTyp.test("marlene.klausen@aol.de"));
-//        assertEquals(false, EmailTyp.test("marlene.klausen@--?.de"));
-//        assertEquals(false, EmailTyp.test(".marlene.klausen@aol.de.com.po"));
-//        assertEquals(true, EmailTyp.test("mm@o-hamburg.de"));
+        assertEquals(true, mail1.equals(mail4));
+        assertEquals(true, EmailTyp.test("marlene.klausen@aol.de"));
+        assertEquals(false, EmailTyp.test("marlene.klausen@--?.de"));
+        assertEquals(false, EmailTyp.test(".marlene.klausen@aol.de.com.po"));
+        assertEquals(true, EmailTyp.test("mm@o-hamburg.de"));
         }
 }
