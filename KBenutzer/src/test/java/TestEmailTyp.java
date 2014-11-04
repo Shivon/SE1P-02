@@ -3,6 +3,7 @@
 import Datatypes.EmailTyp;
 import org.junit.Test;
 
+import java.util.Date;
 import java.util.EnumMap;
 
 import static org.junit.Assert.assertEquals;
@@ -30,5 +31,8 @@ public class TestEmailTyp {
         assertEquals(false, EmailTyp.test("marlene.klausen@--?.de"));
         assertEquals(false, EmailTyp.test(".marlene.klausen@aol.de.com.po"));
         assertEquals(true, EmailTyp.test("mm@o-hamburg.de"));
+
+        Date date = new Date();
+        System.out.println(date.getTime());
         }
 }
