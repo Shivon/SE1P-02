@@ -16,9 +16,9 @@ public class main {
         PersistenceService persistenceService = new PersistenceServiceImpl();
         KModulService modul = new KModulServiceImpl(persistenceService);
         KFragestellungService fragestellung = new KFragestellungServiceImpl(persistenceService, modul);
-        KKommunikationService kommunikation = new KKommunikationServiceImpl(persistenceService, modul);
+        KForumService forum = new KForumServiceImpl(persistenceService, modul);
         KFragebearbeitungService fragebearbeitung = new KFragebearbeitungServiceImpl(persistenceService, fragestellung, modul);
-        KBenutzerService benutzer = new KBenutzerServiceImpl(persistenceService, modul, fragestellung, kommunikation, fragebearbeitung);
+        KBenutzerService benutzer = new KBenutzerServiceImpl(persistenceService, modul, fragestellung, forum, fragebearbeitung);
 
     }
 
