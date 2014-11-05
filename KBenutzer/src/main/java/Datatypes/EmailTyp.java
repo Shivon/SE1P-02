@@ -3,11 +3,10 @@ package Datatypes;
 
 import java.util.regex.Pattern;
 
-/**
- * Created by Louisa on 02.11.2014.
- */
+
 public class EmailTyp {
 
+    //Attribut
     private String email;
 
    //getter and setter
@@ -53,6 +52,7 @@ public class EmailTyp {
         return email.hashCode();
     }
 
+    //Fuction to test if regex is working probaly
    public static boolean test(String email){
         boolean stringMatch = Pattern.matches("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@"
                 + "(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?", email);

@@ -4,11 +4,10 @@ package Entities;
 import Datatypes.Minutes;
 import javax.swing.text.Document;
 
-/**
- * Created by Louisa on 02.11.2014.
- */
+
 public class Frage {
 
+    //Attrubutes
     private Fragenart fragenart;
     private int frageNummer;
     private Minutes loesungszeit;
@@ -17,38 +16,25 @@ public class Frage {
     private Boolean isAvailable;
 
 
-    //getter and setter
-
+    //Getter and Setter
     public Fragenart getFragenart() {
         return fragenart;
     }
-
-//    public void setFragenart(Fragenart fragenart) {
-//        this.fragenart = fragenart;
-//    }
 
     public int getFrageNummer() {
         return frageNummer;
     }
 
-//    public void setFrageNummer(int frageNummer) {
-//        this.frageNummer = frageNummer;
-//    }
-
     public Minutes getLoesungszeit() {
         return loesungszeit;
     }
-
-//    public void setLoesungszeit(Minutes loesungszeit) {
-//        this.loesungszeit = loesungszeit;
-//    }
 
     public Document getFragestellung() {
         return fragestellung;
     }
 
     public void setFragestellung(Document fragestellung) {
-        fragestellung = fragestellung;
+        this.fragestellung = fragestellung;
     }
 
     public Document getMusterloesung() {
@@ -67,7 +53,7 @@ public class Frage {
         this.isAvailable = isAvailable;
     }
 
-    //TODO: Fragenummer darf nicht von jedem änderbar sein... sollte automatisch generieren ~> via DB geregelt später?
+    //Constructor
     private Frage(int frageNummer, Minutes loesungszeit, Document fragestellung, Document musterloesung, Fragenart fragenart) {
         this.frageNummer = frageNummer;
         this.loesungszeit = loesungszeit;
