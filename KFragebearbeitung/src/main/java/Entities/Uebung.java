@@ -1,8 +1,6 @@
 package Entities;
 
-import Datatypes.*;
-import java.security.UnrecoverableEntryException;
-import java.time.Duration;
+import Datatypes.ProcentType;
 import java.util.Date;
 
 /**
@@ -10,18 +8,26 @@ import java.util.Date;
  */
 public class Uebung {
 
-    private Date zeitpunkt;
+    private Date uebungsbeginn;
+    private Date uebungsende;
     private ProcentType korrektheit;
-    private Duration benoetigteZeit;
 
-    //getter and setter
-    public Date getZeitpunkt() {
-        return zeitpunkt;
+    // getter and setter
+    public Date getUebungsbeginn() {
+        return uebungsbeginn;
     }
 
-//    public void setZeitpunkt(Date zeitpunkt) {
-//        this.zeitpunkt = zeitpunkt;
-//    }
+    public void setUebungsbeginn(Date uebungsbeginn) {
+        this.uebungsbeginn = uebungsbeginn;
+    }
+
+    public Date getUebungsende() {
+        return uebungsende;
+    }
+
+    public void setUebungsende(Date uebungsende) {
+        this.uebungsende = uebungsende;
+    }
 
     public ProcentType getKorrektheit() {
         return korrektheit;
@@ -31,25 +37,29 @@ public class Uebung {
         korrektheit = korrektheit;
     }
 
-    public Duration getBenoetigteZeit() {
-        return benoetigteZeit;
+    public long getBenoetigteZeit() {
+        long benoetigteZeitInMilisekunden = uebungsende.getTime() - uebungsbeginn.getTime();
+        // returns needed time in minutes
+        return benoetigteZeitInMilisekunden / 1000 / 60;
     }
 
-    public void setBenoetigteZeit(Duration benoetigteZeit) {
-        this.benoetigteZeit = benoetigteZeit;
+
+    private Uebung() {
+
     }
 
-    // TODO: really insert zeitpunkt manually? Or is it coming from DB?
-    private Uebung(Date zeitpunkt, ProcentType korrektheit, Duration benoetigteZeit){
-        //zeitpunkt.getTime();
-        this.zeitpunkt = zeitpunkt;
-        this.korrektheit = korrektheit;
-        this. benoetigteZeit = benoetigteZeit;
+    private Uebung(Date uebungsbeginn, Date uebungsende, ProcentType korrektheit){
+        setUebungsbeginn(uebungsbeginn);
+        setUebungsende(uebungsende);
+        setKorrektheit(korrektheit);
     }
 
-    // TODO: really insert zeitpunkt manually? Or is it coming from DB?
-    public static Uebung valueOf(Date zeitpunkt, ProcentType korrektheit, Duration benoetigteZeit){
-        return new Uebung(zeitpunkt, korrektheit, benoetigteZeit);
+    public static Uebung valueOf() {
+        return new Uebung();
+    }
+
+    public static Uebung valueOf(Date uebungsbeginn, Date uebungsende, ProcentType korrektheit){
+        return new Uebung(uebungsbeginn, uebungsende, korrektheit);
     }
 
     //TODO: IMPORTANT: while generating Pruefung/ Uebung we need to check if the questions are available!!!

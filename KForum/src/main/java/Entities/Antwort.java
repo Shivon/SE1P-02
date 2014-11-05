@@ -28,12 +28,16 @@ public class Antwort {
     }
 
     // Constructor
-    //TODO: check where we get timestamp from
+    private Antwort(String antwort) {
+        this(antwort, new Date());
+    }
+
     private Antwort(String antwort, Date zeitstempel) {
         this.antwort = antwort;
         this.zeitstempel = zeitstempel;
     }
 
+    public Antwort valueOf(String antwort) { return new Antwort(antwort); }
     public Antwort valueOf(String antwort, Date zeitstempel) {
         return new Antwort(antwort,zeitstempel);
     }

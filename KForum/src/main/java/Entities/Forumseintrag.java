@@ -29,12 +29,16 @@ public class Forumseintrag {
     }
 
     // Constructor
-    //TODO: check where we get timestamp from
+    private  Forumseintrag(String frage) {
+        this(frage, new Date());
+    }
+
     private Forumseintrag(String frage, Date zeitstempel) {
         this.frage = frage;
         this.zeitstempel = zeitstempel;
     }
 
+    public Forumseintrag valueOf(String frage) { return new Forumseintrag(frage); }
     public Forumseintrag valueOf(String frage, Date zeitstempel) {
         return new Forumseintrag(frage, zeitstempel);
     }

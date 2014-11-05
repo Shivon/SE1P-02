@@ -10,7 +10,8 @@ import Services.PersistenceService;
  */
 public class KFragebearbeitungServiceImpl implements KFragebearbeitungService {
 
-
     public KFragebearbeitungServiceImpl(PersistenceService persistenceService, KFragestellungService fragestellung, KModulService modul) {
+
     }
+
 }

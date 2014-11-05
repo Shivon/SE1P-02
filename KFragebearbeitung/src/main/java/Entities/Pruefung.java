@@ -1,8 +1,8 @@
 package Entities;
 
-import Datatypes.*;
+import Datatypes.LaengeDerPruefungTyp;
+import Datatypes.ProcentType;
 
-import java.time.Duration;
 import java.util.Date;
 
 /**
@@ -10,19 +10,28 @@ import java.util.Date;
  */
 public class Pruefung {
     private Date pruefungsbeginn;  //ehemals zeitstempel in UML
+    private Date pruefungsende;
     private ProcentType korrektheit;
-    private Duration benoetigteZeit;
     private LaengeDerPruefungTyp laengeDerPruefung;
 
-    //Länge der Prüfung befindet sich im Enum LaengeDerPruefung
+    //Länge der Prüfung befindet sich im Enum LaengeDerPruefungEnum
 
 
+    // Getter and setter
     public Date getPruefungsbeginn() {
         return pruefungsbeginn;
     }
 
     public void setPruefungsbeginn(Date pruefungsbeginn) {
         this.pruefungsbeginn = pruefungsbeginn;
+    }
+
+    public Date getPruefungsende() {
+        return pruefungsende;
+    }
+
+    public void setPruefungsende(Date pruefungsende) {
+        this.pruefungsende = pruefungsende;
     }
 
     public ProcentType getKorrektheit() {
@@ -33,25 +42,35 @@ public class Pruefung {
         this.korrektheit = korrektheit;
     }
 
-    public Duration getBenoetigteZeit() {
-        return benoetigteZeit;
+    public long getBenoetigteZeit() {
+        long benoetigteZeitInMilisekunden = pruefungsende.getTime() - pruefungsbeginn.getTime();
+        // returns needed time in minutes
+        return benoetigteZeitInMilisekunden / 1000 / 60;
     }
 
-    public void setBenoetigteZeit(Duration benoetigteZeit) {
-        this.benoetigteZeit = benoetigteZeit;
-    }
-
-    // TODO: really insert pruefungsbeginn manually? Or is it coming from DB?
-    private Pruefung(Date pruefungsbeginn, ProcentType korrektheit, Duration benoetigteZeit, LaengeDerPruefungTyp laengeDerPruefung){
-        this.pruefungsbeginn = pruefungsbeginn;
-        this.korrektheit = korrektheit;
-        this.benoetigteZeit = benoetigteZeit;
+    private void setLaengeDerPruefung(LaengeDerPruefungTyp laengeDerPruefung) {
         this.laengeDerPruefung = laengeDerPruefung;
     }
 
-    // TODO: really insert pruefungsbeginn manually? Or is it coming from DB?
-    public static Pruefung valueOf(Date pruefungsbeginn, ProcentType korrektheit, Duration benoetigteZeit, LaengeDerPruefungTyp laengeDerPruefung){
-        return new Pruefung(pruefungsbeginn, korrektheit, benoetigteZeit, laengeDerPruefung);
+
+    // Constructors
+    private Pruefung(LaengeDerPruefungTyp laengeDerPruefung){
+        setLaengeDerPruefung(laengeDerPruefung);
+    }
+
+    private Pruefung(Date pruefungsbeginn, Date pruefungsende, ProcentType korrektheit, LaengeDerPruefungTyp laengeDerPruefung){
+        setPruefungsbeginn(pruefungsbeginn);
+        setPruefungsende(pruefungsende);
+        setKorrektheit(korrektheit);
+        setLaengeDerPruefung(laengeDerPruefung);
+    }
+
+    public static Pruefung valueOf(LaengeDerPruefungTyp laengeDerPruefung) {
+        return new Pruefung(laengeDerPruefung);
+    }
+
+    public static Pruefung valueOf(Date pruefungsbeginn, Date pruefungsende, ProcentType korrektheit, LaengeDerPruefungTyp laengeDerPruefung) {
+        return new Pruefung(pruefungsbeginn, pruefungsende, korrektheit, laengeDerPruefung);
     }
 
     //TODO: IMPORTANT: while generating Pruefung/ Uebung we need to check if the questions are available!!!

@@ -13,7 +13,7 @@ public class Benutzer {
     private EmailTyp email;
     private String benutzername;
     private PasswordType passwort;
-    private int berechtikung;
+    private int berechtigung;
     private Image anzeigebild;
 
     // getter and setter
@@ -57,12 +57,12 @@ public class Benutzer {
         this.passwort = passwort;
     }
 
-    public int getBerechtikung() {
-        return berechtikung;
+    public int getBerechtigung() {
+        return berechtigung;
     }
 //
-//    public void setBerechtikung(int berechtikung) {
-//        this.berechtikung = berechtikung;
+//    public void setBerechtigung(int berechtigung) {
+//        this.berechtigung = berechtigung;
 //    }
 
     public Image getAnzeigebild() {
@@ -75,18 +75,18 @@ public class Benutzer {
 
 
     //Constructor
-    private Benutzer(String name, String vorname, EmailTyp email,String benutzername, PasswordType passwort, int berechtikung, Image anzeigebild) {
+    private Benutzer(String name, String vorname, EmailTyp email,String benutzername, PasswordType passwort, int berechtigung, Image anzeigebild) {
         this.name = name;
         this.vorname = vorname;
         this.email = email;
         this.benutzername = benutzername;
         this.passwort = passwort;
-        this.berechtikung = berechtikung;
+        this.berechtigung = berechtigung;
         this.anzeigebild = anzeigebild;
     }
 
-    public Benutzer valueOf(String name, String vorname, EmailTyp email,String benutzername, PasswordType passwort, int berechtikung, Image anzeigebild){
-        return new Benutzer(name, vorname, email, benutzername, passwort, berechtikung, anzeigebild);
+    public Benutzer valueOf(String name, String vorname, EmailTyp email,String benutzername, PasswordType passwort, int berechtigung, Image anzeigebild){
+        return new Benutzer(name, vorname, email, benutzername, passwort, berechtigung, anzeigebild);
     }
 
 

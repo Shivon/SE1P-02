@@ -4,13 +4,13 @@ package Datatypes;
  * Created by Louisa on 02.11.2014.
  */
 public class LaengeDerPruefungTyp {
-    LaengeDerPruefung laenge;
+    LaengeDerPruefungEnum laenge;
 
-    private LaengeDerPruefungTyp(LaengeDerPruefung laenge){
+    private LaengeDerPruefungTyp(LaengeDerPruefungEnum laenge){
         this.laenge = laenge;
     }
 
-    public LaengeDerPruefungTyp valueOf(LaengeDerPruefung laenge){
+    public LaengeDerPruefungTyp valueOf(LaengeDerPruefungEnum laenge){
         return new LaengeDerPruefungTyp(laenge);
     }
 
@@ -37,7 +37,7 @@ public class LaengeDerPruefungTyp {
         if (this == other) {
             return true;
         }
-        if (!(other instanceof LaengeDerPruefung)) {
+        if (!(other instanceof LaengeDerPruefungEnum)) {
             return false;
         }
         return this.compareTo((LaengeDerPruefungTyp) other) == 0;
